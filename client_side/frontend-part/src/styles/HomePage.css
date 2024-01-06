@@ -1,0 +1,423 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@1,100&display=swap');
+
+body{
+  overflow-x: hidden;
+  
+}
+
+.homepage{
+  margin-bottom: 230px;
+  
+  
+}
+
+
+ .mainRect{
+  width:100vw;
+  height:140px
+  
+ }
+ .mainRect-container{
+  position: relative;
+ }
+ .rightRect{
+  position: absolute;
+  left: 66%;
+  top: 0;
+  transform: translate(4%, -104%); 
+ 
+
+  
+ }
+ .upperRect{
+  position: absolute;
+  left:50%;
+  top:0;
+  transform: translate(-50%, -160%);
+ }
+
+ .leftRect{
+  position: absolute;
+  right: 78;
+  bottom: 0;
+  transform: translate(-1%, -8%);
+ }
+  .recruiterImage {
+    border: 1px white solid;
+   
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin-top: 10px;
+  }
+  .hello-recruiter{
+   
+    color: white;
+    font-family: DM Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 33px;
+letter-spacing: 0em;
+text-align: center;
+
+   
+  }
+
+  .jobFinder {
+    font-family: DM Sans;
+font-size: 30px;
+font-weight: 700;
+line-height: 43px;
+letter-spacing: 0em;
+text-align: center;
+color: white;
+position: absolute;
+right:76vw;
+top:0;
+transform: translate(-50%, -310%);
+width: 200px;
+
+  }
+
+  .loginB, .registerB{
+    width: 120px;height: 40px;
+    margin-right: 40px;
+    margin-top: 110px;
+    border:1px white solid;border-radius: 10px;
+    font-family: DM Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 33px;
+letter-spacing: 0em;
+text-align: center;
+color: white;
+background-color: #FF6B6B;
+
+  }
+  .registerB{
+    margin-right: 90px;
+    color: red;
+    background-color: white;
+  }
+  .top-part {
+    position: absolute;
+    top: 2%; /* Adjust this value to place it where you want vertically */
+    left: 90%; /* Adjust this value to place it where you want horizontally */
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensures it's above the image */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .middle-part {
+    display: flex;
+    justify-content: center;
+ 
+  }
+  .container{
+   
+    margin-left: 100px;
+    
+  }
+ .findJobInput{
+   width: 80%;
+   height: 38px;
+   position: relative;
+   padding-left:70px ;
+   font-family: DM Sans;
+font-size: 21px;
+font-weight: 500;
+line-height: 33px;
+letter-spacing: 0em;
+text-align: left;
+border: 1.8px solid #E3E3E3;
+
+  
+ } 
+.findJobInput::placeholder{
+  font-size: 20px;
+}
+ 
+  
+.middle-part{
+  display: flex;
+  flex-direction: column;
+  
+  border: 0.5px 
+  #FFFFFF solid;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top:40px;
+  height: 200px;
+  box-shadow: 0px 0px 22px 4px #FF202040;
+
+}
+
+
+
+
+/* .skillAndClear{
+  display: flex;
+  flex-direction: row;
+  gap:40%;
+  
+} */
+
+.clear{
+  position: absolute;
+  left: 50%;
+  top:48%;
+  transform: translate(-20%, -80%);
+  color: red;
+  font-family: DM Sans;
+font-size: 17px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+cursor: pointer;
+
+}
+.skill-show {
+  display: flex;
+  align-items: center;
+}
+.addJob{
+  position: absolute;
+  left: 80%;
+
+  transform: translate(-20%, -0%);
+  background-color: red;
+  color: white;
+  font-family: DM Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+border: 2px red solid;
+width: 130px;
+height: 40px;
+
+border-radius: 10px;
+
+
+}
+.logout{
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: 
+  #FF6B6B;
+  border: 1px 
+  #FF6B6B solid;
+  border-radius: 5px;
+  margin-top: 60px;
+  font-family: DM Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 33px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+.dropdown{
+  width: 120px;
+  height: 30px;
+  border: 2px solid #CECECE;
+    border-radius: 5px;
+background-color: #FFFFFF;
+font-family: DM Sans;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+
+
+}
+.skillAndClear{
+  display: flex;
+  gap:40px;
+  align-items: center;
+}
+.skillRendering{
+  width: 115px;height: 24px;
+  background-color:  #FFEEEE;
+  display: inline-block; 
+  margin-right: 30px;
+  padding-left: 10px;
+  position: relative;
+  margin-top: 4px;
+  font-family: DM Sans;
+font-size: 16px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+
+ 
+  
+  align-items: center;
+
+}
+.x{
+  background-color: #cd5252;
+  color: white;
+  position: absolute;
+  cursor:pointer;
+  left: 100%;
+  top: 0;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  height: 24px;
+  align-items: center;
+
+  
+}
+.x:hover{
+  background-color: red;
+  color:white;
+  
+}
+
+.search{
+  position: absolute;
+  left: 16%;
+  transform: translate(140%, 48%);
+  width: 20px;
+  height: 20px;
+}
+
+.skillAndClear{
+  margin-top: 30px;
+  
+}
+
+
+.renderingJob{
+  margin-top: 40px;
+  border-left:4px red solid;
+  box-shadow: 0 0 4px #FF2020;
+  padding:15px;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  box-shadow: 0px 0px 22px 4px #FF202040;
+
+
+  
+
+}
+
+.details{
+  margin-left: 80%;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+
+}
+.bottom-part {
+  display: flex;
+  flex-direction: column;
+  
+  border: 0.5px 
+  #FFFFFF solid;
+  margin-left: 80px;
+  margin-right: 120px;
+  height: 200px;
+
+}
+
+.jobRender-leftDiv{
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+  
+}
+
+.class-one{
+  display: flex;
+  flex-direction: row;
+  gap:80px;
+  
+}
+
+.class-two{
+  margin-left: 40px;
+  display: flex;
+  
+
+  width: 10px;
+}
+
+.jobRender-rightDiv{
+  display: flex;
+  float: row;
+  gap:20px;
+
+ 
+
+ 
+}
+.job-rendering{
+  height:100px;
+  padding-bottom: 10px;
+ 
+  
+}
+.editJob, .viewDetail{
+  border: 2px solid #ED5353;
+  width: 100px;
+height: 30px;
+
+border-radius: 5px;
+
+}
+.editJob{
+  color: red;
+}
+.viewDetail{
+  color: white;
+  background-color: red;
+}
+.leftDiv-right{
+  font-family: Roboto;
+font-size: 19px;
+font-weight: 500;
+letter-spacing: 0em;
+text-align: left;
+height: 20px;
+
+
+}
+.companyName{
+  width: 10vwpx;
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+
+.class-three{
+  display: "flex";
+  align-items: "center" ;
+  width: 10px;
+  
+
+}
+
+
+

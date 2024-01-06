@@ -1,0 +1,133 @@
+
+
+.viewDetailPage{
+    background-color:  #ffefef;
+    height: 200vh;
+    display: flex;justify-content: center;
+    padding-bottom: 80px;
+    margin-bottom: 230px;
+    
+}
+
+.part-two{
+    box-shadow: 0px 4px 23px 2px #0000001A;
+    width: 80% ;
+    height: 100px;
+  position: absolute;
+  top: 118px;
+  left: 10%;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+background-color:  #FFFFFF;
+
+}
+
+.logoImg{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+
+.mainDiv{
+    box-shadow: 0px 2px 35px 1px #0000001A;
+   position: absolute;
+   top:40%;
+   background-color: white;
+   width: 77%;
+   left: 10%;
+   padding-left: 40px;
+   padding-top: 20px;
+}
+
+.timePart{
+    color:#999999;
+    font-family: DM Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+display: flex;
+flex-direction: row;
+gap:30px;
+margin-top: 5px;
+margin-bottom: 5px;
+
+
+}
+
+
+.positionPart{
+    font-family: DM Sans;
+font-size: 43px;
+font-weight: 700;
+line-height: 69px;
+letter-spacing: 0em;
+text-align: start;
+margin-top: 5px;
+margin-bottom: 5px;
+
+}
+
+.locationPart{
+    font-family: DM Sans;
+font-size: 21px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: start;
+color:red;
+margin-top: 5px;
+margin-bottom: 5px;
+
+}
+
+
+.stipendAndDuration{
+    display: flex;
+    gap:60px;
+    font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.aboutCompany , .aboutJob, .skillReq, .additionalInfo{
+    font-family: DM Sans;
+font-size: 24px;
+font-weight: 700;
+line-height: 41px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+
+.aboutCompanyPara, .aboutJobPara, .skillReqPara, .additionalInfoPara{
+    font-family: DM Sans;
+font-size: 21px;
+font-weight: 400;
+line-height: 35px;
+letter-spacing: 0em;
+text-align: left;
+color: #595959;
+}
+
+.skillReqPara{
+    background-color:#ffefef ;
+    width: 120px;height: 30px;
+    border: 1px white solid;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.ul-skills{
+display: flex;
+flex-direction:row;
+gap:30px;
+
+}

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+body{
+    /* overflow:hidden; */
+     margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.register-container{
+    display: flex;
+    flex-direction: row;
+    
+   
+}
+.left-side{
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 30px;
+
+}
+.right-side{
+    width: 40%;
+}
+.text4{
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+   gap: 14px;
+}
+
+.name, .email, .mobile, .password {
+
+    
+    border: 2px solid #C2C2C2 ;
+    width: 60%;
+    height: 40px;
+
+}
+span{
+    display: flex;
+    gap: 8px;
+}
+.submitButton{
+    width: 300px;
+    height: 45px;
+    background-color:
+    #ED5353 ;
+    font-family: 
+    DM Sans;
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.error {
+  color: red;
+  font-size: 14px;
+}
+button {
+    /* Other styles */
+    opacity: 0.8; /* Reduces opacity slightly to indicate interactivity */
+    
+  }
+  
+  button:hover {
+    cursor: pointer;
+
+    opacity: 1; /* Returns to full opacity on hover */
+  }
+
+  strong{
+    margin-left: 8px;
+    color: black;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color:#C2C2C2 ;
+    cursor: pointer;
+
+  }
+  .registerimg{
+    
+height: 100%;
+width: 40vw;
+
+  }
