@@ -19,7 +19,6 @@ const jobinfo=require("./routes/jobpostRoute.js");
 
 const app = express();
 
-app.use(cors())
 
 
 // Using body-parser middleware
@@ -32,9 +31,8 @@ app.use(cors());
 
 //health checkpoint
 
-app.get('/health' , (req, res, next)=>{
+app.get('/api/health' , (req, res, next)=>{
     res.status(200).send({message : "Ok",status:"server is setup succesfully!!!"})
-
 
 })
 //using routers- resgitration, login and others

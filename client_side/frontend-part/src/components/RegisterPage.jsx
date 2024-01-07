@@ -7,8 +7,6 @@ import '../styles/RegisterPage.css'; // Import your CSS file
  import text3 from '../assets/createAccount.png';
  import text4 from '../assets/personalJobFinder-small.png'
  import { useNavigate } from "react-router-dom";
-
-
 import { Link } from 'react-router-dom';
 
 function RegisterPage() {
@@ -169,31 +167,19 @@ const handleCheck = (e) => {
 
   
     try {
-      const response = await fetch('http://localhost:3000/api/signup', {
-          method: 'POST',
+      
+      const response = await axios.post('http://localhost:3000/api/signup',formData, {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(formData)
         });
-      
-        if (response.ok) {
-          
-          const data = await response.json();
-           // Store the received token in localStorage
-      localStorage.setItem('token', data.token); // Assuming the token is in 'data.token'
-      console.log('JWT token stored in localStorage:', data.token);
-          // Process the data
-          console.log(data);
-        } else {
-          throw new Error('Request failed');
-        }
+        console.log(response);
     } catch (error) {
       console.error('Error:', error);
     
     }
     window.alert("Form submitted successfully!");
-    navigateTo("/homePage");
+    // navigateTo("/homePage");
 
   };
   
