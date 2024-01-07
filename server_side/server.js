@@ -1,7 +1,6 @@
 
 require('dotenv').config();
 const express=require('express');
-const errorHandler = require('./middlewares/errorHandlingMiddleware.js'); // Importing the error handler middleware
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const registrationRoute = require("./routes/authRoute.js");
@@ -48,7 +47,6 @@ app.use('/job', allJobBySkills) //->api to filter all job by skills
 app.use('/job', viewDetails) //->api to view details of job by id
 app.use('/job', jobinfo)//-api to get all job info
 
-app.use(errorHandler);
 
 
 //starting the server
