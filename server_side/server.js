@@ -3,14 +3,20 @@ require('dotenv').config();
 const express=require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const registrationRoute = require("./routes/authRoute.js");
-const loginRoute = require("./routes/authRoute.js");
+const {registerRoute, loginRoute} = require("./routes/authRoute.js");
+// const loginRoute = require("./routes/authRoute.js");
 const { ConnectionToDB } = require("./db.js");
-const jobPostRoute=require("./routes/jobpostRoute.js");
-const editJobPostRoute=require("./routes/jobpostRoute.js");
-const allJobBySkills=require("./routes/jobpostRoute.js");
-const viewDetails=require("./routes/jobpostRoute.js");
-const jobinfo=require("./routes/jobpostRoute.js");
+const {
+    jobPostRoute,
+    editJobPostRoute,
+    allJobBySkills,
+    viewDetails,
+    jobinfo
+  } = require("./routes/jobpostRoute.js");
+  // const editJobPostRoute=require("./routes/jobpostRoute.js");
+// const allJobBySkills=require("./routes/jobpostRoute.js");
+// const viewDetails=require("./routes/jobpostRoute.js");
+// const jobinfo=require("./routes/jobpostRoute.js");
 
 
 
@@ -37,7 +43,7 @@ app.get('/api/health' , (req, res, next)=>{
 })
 //using routers- resgitration, login and others
 
-app.use('/api', registrationRoute)//->it has to be tested as /api/signup
+app.use('/api', registerRoute)//->it has to be tested as /api/signup
 app.use('/api', loginRoute)//-> /api/login
 app.use('/job', jobPostRoute)//->api to post the job
 app.use('/job', editJobPostRoute)//->api to edit the current job post

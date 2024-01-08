@@ -9,7 +9,7 @@ require('dotenv').config();
 
 
 // Signup route
-router.post('/signup', async (req, res) => {
+const registerRoute=router.post('/signup', async (req, res) => {
   try {//step-1
     //we got the name, emai, passwords, and mobile information from the body( as we are sending thses informations under body)
     const { name, email, mobile, password } = req.body;
@@ -84,7 +84,7 @@ router.post('/signup', async (req, res) => {
 
 // Login route
 
-router.post('/login', async (req, res) => {
+const loginRoute=router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -132,4 +132,4 @@ router.post('/login', async (req, res) => {
     }
   });
     
-module.exports = router;
+module.exports = {registerRoute , loginRoute};

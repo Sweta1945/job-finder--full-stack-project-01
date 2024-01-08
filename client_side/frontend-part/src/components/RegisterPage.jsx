@@ -180,6 +180,14 @@ const handleCheck = (e) => {
         console.log(response);
         
         setIsLoading(false)
+         // Assuming the response contains a token upon successful registration
+    const token = response.data.token; // Adjust this based on your server response
+
+    // Store the token securely (e.g., in local storage)
+    localStorage.setItem('token', token);
+
+    // After successful registration, automatically navigate to the homepage
+    navigateTo("/homePage");
 
     } catch (error) {
       console.error('Error:', error);

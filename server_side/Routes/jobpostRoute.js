@@ -7,7 +7,7 @@ const authenticate = require('../middlewares/verifyToken.js'); // Import your au
 
 //api to create a job post
 
-router.post('/job-form', async(req, res, next) => {
+const jobPostRoute=router.post('/job-form', async(req, res, next) => {
 
     const{companyName,logoUrl, position, salary, jobType ,jobPlace, location, description, skills, about, additionalInfo}=req.body;
 
@@ -39,7 +39,7 @@ router.post('/job-form', async(req, res, next) => {
 
 //api to update the filed in existing job post
 
-router.put('/edit-job-posts/:id', async(req, res, next) => {
+const editJobPostRoute=router.put('/edit-job-posts/:id', async(req, res, next) => {
 
     const jobId = req.params.id;
     const updatedField=req.body; //as req.body is containing all the field tat job-post has and can be updated
@@ -72,7 +72,7 @@ router.put('/edit-job-posts/:id', async(req, res, next) => {
 
 // The & symbol is used in URLs to separate multiple query parameters. In a URL, query parameters are typically appended to the URL using ? to start the query string, and subsequent parameters are separated by &.
 
-router.get('/allJobs-bySkillsAndTitle', async(req, res, next) => {
+const allJobBySkills=router.get('/allJobs-bySkillsAndTitle', async(req, res, next) => {
     try{
 
     const skills= req.query.skills;
@@ -125,7 +125,7 @@ if (jobPosts.length === 0) {
 
 
 // Route to get the detailed description of a job post by ID
-router.get('/job-details/:id', async (req, res) => {
+const viewDetails=router.get('/job-details/:id', async (req, res) => {
     try {
         const jobId = req.params.id;
 
@@ -159,7 +159,7 @@ async function connectDB() {
 
 connectDB();
 
-router.get('/job-info', async (req, res) => {
+const jobinfo=router.get('/job-info', async (req, res) => {
   try {
     const db = client.db('demo'); // Replace with your database name
     const collection = db.collection('jobs'); // Replace with your collection name
@@ -174,4 +174,10 @@ router.get('/job-info', async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = {
+  jobPostRoute: jobPostRoute,
+  editJobPostRoute: editJobPostRoute,
+  allJobBySkills: allJobBySkills,
+  viewDetails: viewDetails,
+  jobinfo: jobinfo
+};
