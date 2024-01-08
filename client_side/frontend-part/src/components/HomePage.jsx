@@ -407,6 +407,7 @@ const handleClearSkills = () => {
 
       <div className="middle-part">
         <div className="container">
+          <div className="inputAndSearch">
           <input
             className="findJobInput"
             type="text"
@@ -418,6 +419,8 @@ const handleClearSkills = () => {
             className="search"
             onClick={handleFilteredJob}
           ></img>
+          </div>
+         
           <br />
           <span className="skillAndClear">
             <select

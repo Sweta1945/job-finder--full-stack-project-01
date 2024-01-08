@@ -291,14 +291,21 @@ text-align: center;
   color:white;
   
 }
+.inputAndSearch{
+  display: flex;
+  flex-direction: row;
+  gap:40px;
+  align-items: center;
+  position: relative;
+}
 
 .search{
   position: absolute;
-  top: 31%;
-  left: 19%;
+  top: 15%;
   transform: translate(140%, 48%);
   width: 20px;
   height: 20px;
+  margin-left: 20px;
 }
 
 .skillAndClear{
