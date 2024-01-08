@@ -34,6 +34,8 @@ function JobDetailPage() {
         const data = await response.json();
         console.log('Job details submitted:', data);
         // Optionally, redirect to another page or perform any necessary action upon successful submission
+        window.alert("Job Added successfully!");
+
         navigate('/homePage')
       } else {
         console.error('Request failed');

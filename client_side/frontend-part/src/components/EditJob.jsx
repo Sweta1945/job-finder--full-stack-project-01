@@ -71,6 +71,8 @@ function EditJob() {
       if (response.ok) {
         const data = await response.json();
         console.log('Job details updated:', data);
+        window.alert("Job Editted successfully!");
+
         navigate('/homePage'); // Redirect upon successful update
       } else {
         console.error('Request failed');
@@ -79,6 +81,8 @@ function EditJob() {
     } catch (error) {
       console.error('Error:', error);
     }
+    
+
   };
 
   const handleChangeDetail = (e) => {
