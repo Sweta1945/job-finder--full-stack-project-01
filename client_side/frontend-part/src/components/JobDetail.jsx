@@ -39,7 +39,7 @@ function JobDetail() {
     async function fetchJobDetails() {
       try {
         const response = await fetch(
-          `https://backend-server-pet0.onrender.com/job/job-details/${jobId}`
+          `http://localhost:3000/job/job-details/${jobId}`
         );
         if (response.ok) {
           const data = await response.json();

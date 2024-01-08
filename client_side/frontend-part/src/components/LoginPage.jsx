@@ -25,7 +25,7 @@ function LoginPage() {
     try {
       // console.log(loginData);
       const response = await axios.post(
-        "https://backend-server-pet0.onrender.com/api/login",loginData,{
+        "http://localhost:3000/api/login",loginData,{
           headers: {
               'Content-Type': 'application/json',
           }

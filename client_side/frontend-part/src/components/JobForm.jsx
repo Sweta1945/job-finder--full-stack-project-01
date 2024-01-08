@@ -22,7 +22,7 @@ function JobDetailPage() {
   const handleSubmitJobDetails = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://backend-server-pet0.onrender.com/job/job-form', {
+      const response = await fetch('http://localhost:3000/job/job-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

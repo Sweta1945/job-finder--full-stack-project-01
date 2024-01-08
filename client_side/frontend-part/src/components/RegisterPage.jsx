@@ -172,7 +172,7 @@ const handleCheck = (e) => {
   
     try {
       
-      const response = await axios.post('https://backend-server-pet0.onrender.com/api/signup',formData, {
+      const response = await axios.post('http://localhost:3000/api/signup',formData, {
           headers: {
             'Content-Type': 'application/json'
           },
