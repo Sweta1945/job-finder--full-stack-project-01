@@ -7,8 +7,9 @@ const {registerRoute, loginRoute} = require("./Routes/authRoute.js");
 // const loginRoute = require("./routes/authRoute.js");
 
 
+
 require('dotenv').config();
-const { ConnectionToDB } = require("./db.js");
+const  ConnectionToDB = require("./db.js");
 const {
     jobPostRoute,
     editJobPostRoute,
