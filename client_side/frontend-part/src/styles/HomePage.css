@@ -134,11 +134,16 @@ line-height: 33px;
 letter-spacing: 0em;
 text-align: left;
 border: 1.8px solid #E3E3E3;
+display: flex;
+
+margin-left: 30px;
+
 
   
  } 
 .findJobInput::placeholder{
   font-size: 20px;
+  margin-left: 40px;
 }
  
   
@@ -169,7 +174,7 @@ border: 1.8px solid #E3E3E3;
 .clear{
   position: absolute;
   left: 50%;
-  top:48%;
+  top:46%;
   transform: translate(-20%, -80%);
   color: red;
   font-family: DM Sans;
@@ -287,7 +292,8 @@ text-align: center;
 
 .search{
   position: absolute;
-  left: 16%;
+  top: 31%;
+  left: 19%;
   transform: translate(140%, 48%);
   width: 20px;
   height: 20px;

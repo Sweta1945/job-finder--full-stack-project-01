@@ -81,7 +81,7 @@ router.get('/allJobs-bySkillsAndTitle', async(req, res, next) => {
 
     if(!skills && !title)
     {
-        return res.send(400).json({message: 'No skills'});
+        return res.send(400).json({message: 'No skills and Title'});
     }
     
     let jobPosts = [];

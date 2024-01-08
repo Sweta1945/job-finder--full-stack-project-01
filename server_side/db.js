@@ -5,7 +5,7 @@ async function ConnectionToDB() {
     try{
 
     const result = await mongoose.connect(process.env.mongoDB_URL,{
-        dbName : 'JOB'
+        dbName : 'demo'
     });
     console.log('connected to db');
     }catch(e){

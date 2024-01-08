@@ -52,4 +52,3 @@ app.listen(process.env.PORT, () => {
     ConnectionToDB();
     console.log(`server is running on port ${process.env.PORT}`);
 });
-

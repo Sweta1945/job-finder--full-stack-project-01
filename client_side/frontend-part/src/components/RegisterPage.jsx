@@ -9,6 +9,7 @@ import '../styles/RegisterPage.css'; // Import your CSS file
  import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
+
 function RegisterPage() {
   const navigateTo = useNavigate();
 
@@ -23,6 +24,8 @@ function RegisterPage() {
   const [emailErrorMsg, setEmailErrorMsg] = useState("");
   const [mobileErrorMsg, setMobileErrorMsg] = useState("");
   const [isCheckedErrorMsg, setIsCheckedErrorMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   console.log(formData)
 
  const handleName=(e)=>{
@@ -117,6 +120,7 @@ const handleCheck = (e) => {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
+    setIsLoading(true)
     if(nameErrorMsg!==''|| mobileErrorMsg!==''|| passwordErrorMsg!==''|| emailErrorMsg!==''|| isCheckedErrorMsg!==''){
       return;
     }
@@ -174,12 +178,18 @@ const handleCheck = (e) => {
           },
         });
         console.log(response);
+        
+        setIsLoading(false)
+
     } catch (error) {
       console.error('Error:', error);
+      
+      setIsLoading(false)
+
     
     }
     window.alert("Form submitted successfully!");
-    // navigateTo("/homePage");
+     navigateTo("/homePage");
 
   };
   
@@ -246,7 +256,8 @@ const handleCheck = (e) => {
           </span>
           {isCheckedErrorMsg && <div className="error">{isCheckedErrorMsg}</div>}
 
-          <button type='submit' className='submitButton'>Create Account</button>
+          <button type='submit' className='submitButton'>          {isLoading ? 'Loading...' : 'Create Account'}
+</button>
 
             
           <p>

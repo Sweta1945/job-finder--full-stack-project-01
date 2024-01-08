@@ -57,10 +57,16 @@ function HomePage() {
   //handleing skills that i choose from drop down should get display at bottom
   const handleSkillSelection = (event) => {
     const selectedSkill = event.target.value; //here am getting the selected skills from drop down
-    if (!selectedSkills.includes(selectedSkill)) {
-      setSelectedSkills([...selectedSkills, selectedSkill]);
-    }
-  };
+   // Check if the selected skill already exists in the selectedSkills array
+  if (!selectedSkills.includes(selectedSkill)) {
+    const updatedSkills = [...selectedSkills, selectedSkill]; // Add the selected skill to the existing selectedSkills
+    setSelectedSkills(updatedSkills); // Update the selectedSkills state with the new skill(s)
+  }
+
+  // Trigger job filtering every time a skill is selected
+  handleFilteredJob();
+};
+
   //useeffect to check person is logged in or not
   useEffect(() => {
     // Check for the presence of the token in localStorage (or sessionStorage)
@@ -73,7 +79,7 @@ function HomePage() {
       setIsLoggedIn(false);
     }
   }, []);
-
+ 
   //useeffct to fetch the details from job form from backend
 
   useEffect(() => {

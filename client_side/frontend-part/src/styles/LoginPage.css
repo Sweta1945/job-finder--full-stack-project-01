@@ -38,6 +38,15 @@ body{
     border: 2px solid #C2C2C2 ;
     width: 60%;
     height: 40px;
+    font-family: DM Sans;
+font-size: 18px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: left;
+padding-left: 20px;
+background-color: rgb(223, 243, 252);
+
 
 }
 

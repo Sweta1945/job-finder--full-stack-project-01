@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 function LoginPage() {
   const [loginData, setLoginData] = useState({});
   const [error, setError] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -19,9 +21,8 @@ function LoginPage() {
 
   const handleSubmitLogin = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     try {
-      const health = await axios.get("http://localhost:3000/api/health");
-      console.log(health);
       // console.log(loginData);
       const response = await axios.post(
         "http://localhost:3000/api/login",loginData,{
@@ -32,15 +33,30 @@ function LoginPage() {
 
       );
       console.log(response);
-      if(response.data){
-        localStorage.setItem('token',response.data.jwttoken);
-        navigate("/homePage");
-      }
-    } catch (error) {
-      console.error("Error:", error);
+      // Check if the login was successful based on the response status or data
+    if (response.data.status ==="success") { // Modify this condition based on the expected successful response status
+      localStorage.setItem('token', response.data.jwttoken);
+      navigate("/homePage");
+    } else {
+      setError("Invalid credentials. Please try again.");
+    }
+    setIsLoading(false)
+
+  } catch (error) {
+    if (error.response) {
+      // Server responded with a status code outside the range of 2xx
+      setError(error.response.data.message || "Unexpected error occurred");
+    } else if (error.request) {
+      // Request was made but no response received
+          setError("No response received from the server");
+    } else {
+      // Something else happened while setting up the request
       setError("Unexpected error occurred");
     }
-  };
+  }
+
+  setIsLoading(false);
+};
 
   return (
     <div className="login-container">
@@ -67,7 +83,9 @@ function LoginPage() {
           />
 
           <button onClick={handleSubmitLogin} className="submitButton">
-            Sign in
+          {isLoading ? 'Loading...' : '  Sign in'}
+
+          
           </button>
           <p>
             Don't have an account?{" "}
