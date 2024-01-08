@@ -1,10 +1,13 @@
 
-require('dotenv').config();
+
 const express=require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const {registerRoute, loginRoute} = require("./Routes/authRoute.js");
 // const loginRoute = require("./routes/authRoute.js");
+
+
+require('dotenv').config();
 const { ConnectionToDB } = require("./db.js");
 const {
     jobPostRoute,
