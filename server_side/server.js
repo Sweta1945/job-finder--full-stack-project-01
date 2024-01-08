@@ -3,7 +3,7 @@ require('dotenv').config();
 const express=require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const {registerRoute, loginRoute} = require("./Routes/authRoute.js");
+const {registerRoute, loginRoute} = require("./routes/authRoute.js");
 // const loginRoute = require("./routes/authRoute.js");
 const { ConnectionToDB } = require("./db.js");
 const {
@@ -12,7 +12,7 @@ const {
     allJobBySkills,
     viewDetails,
     jobinfo
-  } = require("./Routes/jobpostRoute.js");
+  } = require("./routes/jobpostRoute.js");
   // const editJobPostRoute=require("./routes/jobpostRoute.js");
 // const allJobBySkills=require("./routes/jobpostRoute.js");
 // const viewDetails=require("./routes/jobpostRoute.js");
