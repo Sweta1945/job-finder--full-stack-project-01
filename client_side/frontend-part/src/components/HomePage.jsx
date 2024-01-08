@@ -40,7 +40,7 @@ function HomePage() {
 
   const handleFilteredJob = async () => {
     try {
-      const apiUrl = `http://localhost:3000/job/allJobs-bySkillsAndTitle?skills=${selectedSkills}&position=${title}`;
+      const apiUrl = `https://backend-server-1yct.onrender.com/job/allJobs-bySkillsAndTitle?skills=${selectedSkills}&position=${title}`;
       console.log("API URL:", apiUrl); // Log the API URL before making the request
       const response = await fetch(apiUrl);
       // const response = await fetch(`http://localhost:3000/job/allJobs-bySkillsAndTitle?skills=${selectedSkills}&position=${title}`);
