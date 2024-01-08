@@ -4,7 +4,7 @@ async function ConnectionToDB() {
   try {
     console.log(process.env.MONGODB_URL);
 
-    const result = await mongoose.connect(process.env.mongoDB_URL, {
+    const result = await mongoose.connect(process.env.MONGODB_URL, {
       dbName: "demo",
     });
 
