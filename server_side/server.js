@@ -9,7 +9,7 @@ const {registerRoute, loginRoute} = require("./Routes/authRoute.js");
 
 
 require('dotenv').config();
-const  ConnectionToDB = require("./db.js");
+const  connectDB = require("./db.js");
 const {
     jobPostRoute,
     editJobPostRoute,
@@ -59,6 +59,6 @@ app.use('/job', jobinfo)//-api to get all job info
 
 //starting the server
 app.listen(process.env.PORT, () => {
-    ConnectionToDB();
+    connectDB();
     console.log(`server is running on port ${process.env.PORT}`);
 });
