@@ -43,12 +43,21 @@ const editJobPostRoute=router.put('/edit-job-posts/:id', async(req, res, next) =
 
     const jobId = req.params.id;
     const updatedField=req.body; //as req.body is containing all the field tat job-post has and can be updated
+    // Separate the skills from other fields
+    const { skills, ...otherFields } = updatedField;
+console.log(updatedField);
+let skillsArray = skills;
+if (typeof skillsArray === 'string') {
+    skillsArray = skillsArray.split(',').map(skill => skill.trim());
+}
 
-    try{
-        const updateJob= await Jobs.findByIdAndUpdate( jobId,
-                                                      {$set: updatedField}, 
-                                                      {new:true}
-                                                    );
+try {
+    const updateJob = await Jobs.findByIdAndUpdate(jobId, {
+        $set: {
+            ...otherFields, // Update other fields
+            skillsRequired: skillsArray // Update skills field
+        }
+    }, { new: true });
 
                 //if job with id is not found
                 if(!updateJob){

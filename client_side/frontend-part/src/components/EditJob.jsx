@@ -60,7 +60,7 @@ function EditJob() {
   const handleSubmitJobDetails = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`https://backend-server-1yct.onrender.com/job/edit-job-posts/${jobId}`, {
+      const response = await fetch(`http://localhost:3000/job/edit-job-posts/${jobId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
