@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const Jobs = require('../models/jobs.js'); 
-const authenticate = require('../middlewares/verifyToken.js'); // Import your authentication middleware
+const authenticate = require('../Middlewares/verifyToken.js'); // Import your authentication middleware
 
 
 //api to create a job post
