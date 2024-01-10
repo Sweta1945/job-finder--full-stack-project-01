@@ -9,9 +9,8 @@ const authenticate = require('../Middlewares/verifyToken.js'); // Import your au
 
 const jobPostRoute=router.post('/job-form', async(req, res, next) => {
 
-    const{companyName,logoUrl, position, salary, jobType ,jobPlace, location, description, skills, about, additionalInfo}=req.body;
+    const{companyName,logoUrl, position, salary, jobType ,jobPlace, location, description, skills, about}=req.body;
 
-    const recruiterName = req.user ? req.user.name : 'Unknown'; // Check if req.user exists before accessing its properties
 
 
 

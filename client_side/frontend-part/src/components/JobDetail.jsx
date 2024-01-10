@@ -177,6 +177,7 @@ function JobDetail() {
         {formData.jobPlace === "remote" || formData.jobPlace === "Remote"
           ? `work from home  Job / Internship at ${formData.companyName}`
           : ""}
+          
       </h3>
       </div>
       </div>

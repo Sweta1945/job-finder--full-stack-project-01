@@ -25,7 +25,7 @@ function LoginPage() {
     try {
       // console.log(loginData);
       const response = await axios.post(
-        "https://backend-server-1yct.onrender.com/api/login",loginData,{
+        "http://localhost:3000/api/login",loginData,{
           headers: {
               'Content-Type': 'application/json',
           }
@@ -33,10 +33,27 @@ function LoginPage() {
 
       );
       console.log(response);
+      console.log(response.data);
       // Check if the login was successful based on the response status or data
     if (response.data.status ==="success") { // Modify this condition based on the expected successful response status
       localStorage.setItem('token', response.data.jwttoken);
+
+
+/*
+so the user section value from local storage will be remove(which previously kept registered user name or any other users name who previously logged in maybe )
+and it will put current logged in user's name
+*/
+
+// Remove the stored username from local storage
+localStorage.removeItem('user');
+
+// Set the user's name from response.data.user.name to local storage
+localStorage.setItem('user', response.data.user.name);
+
+window.alert("You Logged-In successfully!");
+
       navigate("/homePage");
+
     } else {
       setError("Invalid credentials. Please try again.");
     }

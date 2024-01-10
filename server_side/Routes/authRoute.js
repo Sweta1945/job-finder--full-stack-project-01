@@ -102,7 +102,9 @@ const loginRoute=router.post('/login', async (req, res) => {
             res.json({
               status: "success",
               message:"you have logged in succesfully",
-              jwttoken
+              jwttoken,
+              user: { name: user.name}
+              
             })
 
           }

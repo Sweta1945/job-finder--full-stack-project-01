@@ -186,6 +186,15 @@ const handleCheck = (e) => {
     // Store the token securely (e.g., in local storage)
     localStorage.setItem('token', token);
 
+
+    /*
+
+    ok my logic to display the recruiter's name when user register or logs in is-> while registering i will make a "user" section in local storage which will keep the user's name
+    and if anyone register that  will get fetched out in homepage and if anyone logs in then user's section value wil; be replaced by user's name who
+    gets logged in
+    */
+    localStorage.setItem('user', response.data.recruiterName);
+
     // After successful registration, automatically navigate to the homepage
     navigateTo("/homePage");
 

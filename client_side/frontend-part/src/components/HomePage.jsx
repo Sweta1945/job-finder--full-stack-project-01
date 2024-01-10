@@ -85,11 +85,12 @@ function HomePage() {
   useEffect(() => {
     async function fetchJobDetails() {
       try {
-        const response = await fetch("https://backend-server-pet0.onrender.com/job/job-info");
-
+        const response = await fetch("http://localhost:3000/job/job-info");
+       
         if (response.ok) {
           // console.log(response);
           const data = await response.json();
+          console.log(data);
 
           setJobList(data.jobPosts || []); // Handle potential empty or undefined jobPosts
 
@@ -352,6 +353,13 @@ const handleClearSkills = () => {
     );
     setSelectedSkills(updatedSkills);
   };
+//this will make the name's first letter capital of the name->fetched from local storag to display as recruiter's name
+  const storedUser = localStorage.getItem('user');
+  const formattedUser = storedUser ? storedUser.charAt(0).toUpperCase() + storedUser.slice(1) : '';
+
+
+
+
   return (
     <div className="homepage">
       <div className="image-container">
@@ -393,7 +401,9 @@ const handleClearSkills = () => {
                 }}
               >
                 
-                <h3 className="hello-recruiter">Hello! Recruiter</h3>
+                <h3 className="hello-recruiter">    Hello! {formattedUser ? formattedUser : "Recruiter"}
+
+</h3>
                 <img
                   src={recruiterImage}
                   alt="recruiterImage"
