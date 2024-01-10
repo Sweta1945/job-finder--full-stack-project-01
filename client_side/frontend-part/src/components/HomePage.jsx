@@ -85,7 +85,7 @@ function HomePage() {
   useEffect(() => {
     async function fetchJobDetails() {
       try {
-        const response = await fetch("http://localhost:3000/job/job-info");
+        const response = await fetch("https://backend-server-1yct.onrender.com/job/job-info");
        
         if (response.ok) {
           // console.log(response);
