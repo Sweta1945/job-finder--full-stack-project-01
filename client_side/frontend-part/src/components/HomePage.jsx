@@ -429,6 +429,8 @@ const handleClearSkills = () => {
             className="search"
             onClick={handleFilteredJob}
           ></img>
+          <p className="clear" onClick={handleClearSkills}>Clear</p>
+
           </div>
          
           <br />
@@ -471,7 +473,6 @@ const handleClearSkills = () => {
               </Link>
             )}
             <br />
-            <p className="clear" onClick={handleClearSkills}>Clear</p>
           </span>
           {/* <button onClick={handleFilteredJob}>find job</button> */}
         </div>

@@ -173,21 +173,7 @@ margin-left: 30px;
   
 } */
 
-.clear{
-  position: absolute;
-  left: 50%;
-  top:46%;
-  transform: translate(-20%, -80%);
-  color: red;
-  font-family: DM Sans;
-font-size: 17px;
-font-weight: 500;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: center;
-cursor: pointer;
 
-}
 .skill-show {
   display: flex;
   align-items: center;
@@ -306,6 +292,22 @@ text-align: center;
   width: 20px;
   height: 20px;
   margin-left: 20px;
+}
+
+.clear{
+  position: absolute;
+  left: 50%;
+  top:90%;
+  transform: translate(-20%, 160%);
+  color: red;
+  font-family: DM Sans;
+font-size: 17px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+cursor: pointer;
+
 }
 
 .skillAndClear{
