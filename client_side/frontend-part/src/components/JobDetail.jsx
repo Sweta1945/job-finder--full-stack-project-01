@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import "../styles/JobDetail.css"
+import "../styles/JobDetail.css";
 import jobImage from "../assets/mainRect.png";
 import { Link } from "react-router-dom";
 import jobLogo from "../assets/jobLogo.jpg";
@@ -15,8 +15,7 @@ function JobDetail() {
   const { jobId } = useParams();
   const location = useLocation();
   const isLoggedIn = new URLSearchParams(location.search).get("isLoggedIn");
-  const [logIn, setLogin] = useState(isLoggedIn==='true');//check thats if isLoggedIn is true if it is true then logIn will becom true else false
-
+  const [logIn, setLogin] = useState(isLoggedIn === "true"); //check thats if isLoggedIn is true if it is true then logIn will becom true else false
 
   const [formData, setFormData] = useState({
     companyName: "",
@@ -73,48 +72,55 @@ function JobDetail() {
   const timeAgo = (dateString) => {
     const currentDate = new Date();
     const previousDate = new Date(dateString);
-  
+
     const timeDifference = currentDate.getTime() - previousDate.getTime();
     const minutesDifference = Math.floor(timeDifference / (1000 * 60));
     const hoursDifference = Math.floor(timeDifference / (1000 * 60 * 60));
     const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     const weeksDifference = Math.floor(daysDifference / 7);
-  
+
     if (minutesDifference < 1) {
-      return 'Just now';
+      return "Just now";
     } else if (minutesDifference < 60) {
-      return `${minutesDifference} min${minutesDifference > 1 ? 's' : ''} ago`;
+      return `${minutesDifference} min${minutesDifference > 1 ? "s" : ""} ago`;
     } else if (hoursDifference < 24) {
-      return `${hoursDifference} hr${hoursDifference > 1 ? 's' : ''} ago`;
+      return `${hoursDifference} hr${hoursDifference > 1 ? "s" : ""} ago`;
     } else if (daysDifference < 7) {
-      return `${daysDifference} day${daysDifference > 1 ? 's' : ''} ago`;
+      return `${daysDifference} day${daysDifference > 1 ? "s" : ""} ago`;
     } else {
-      return `${weeksDifference} w${weeksDifference > 1 ? 's' : ''} ago`;
+      return `${weeksDifference} w${weeksDifference > 1 ? "s" : ""} ago`;
     }
   };
-  
+
   const handleLogout = () => {
     // Perform any necessary logout actions (e.g., clearing tokens, etc.)
     // For example, clearing the token from localStorage:
     localStorage.removeItem("token");
     setLogin(false);
 
-  navigate('/homePage')
+    navigate("/homePage");
   };
+
+  //this will make the name's first letter capital of the name->fetched from local storag to display as recruiter's name
+  const storedUser = localStorage.getItem("user");
+  const formattedUser = storedUser
+    ? storedUser.charAt(0).toUpperCase() + storedUser.slice(1)
+    : "";
 
   return (
     <div className="viewDetailPage">
       <div className="image-container">
-      <img src={mainRect} alt="mainRect" className="mainRect"></img>
+        <img src={mainRect} alt="mainRect" className="mainRect"></img>
         <div className="mainRect-container">
           <img src={rightRect} alt="rightRect" className="rightRect"></img>
           <img src={upperRect} alt="upperRect" className="upperRect"></img>
           <img src={leftRect} alt="leftRect" className="leftRect"></img>
-       ,<Link to='/homePage'>   <h2 className="jobFinder">Job Finder</h2></Link>
-
-          </div>
-          <div className="top-part">
-
+          <Link to="/homePage">
+            {" "}
+            <h2 className="jobFinder">Job Finder</h2>
+          </Link>
+        </div>
+        <div className="top-part">
           {!logIn && (
             <>
               <Link to="/login">
@@ -130,7 +136,7 @@ function JobDetail() {
               <button onClick={handleLogout} className="logout">
                 Logout
               </button>
-            
+
               <div
                 style={{
                   display: "flex",
@@ -142,44 +148,50 @@ function JobDetail() {
                   alignItems: "center",
                 }}
               >
-                
-                <h3 className="hello-recruiter">Hello! Recruiter</h3>
-                <img
-                  src={recruiterImage}
-                  alt="recruiterImage"
-                  className="recruiterImage"
-                ></img>
+                <h3 className="hello-recruiter">
+                  {" "}
+                  Hello! {formattedUser ? formattedUser : "Recruiter"}
+                </h3>
+                <div className="RECRUITER-LOGO">
+                  <img
+                    src={recruiterImage}
+                    alt="recruiterImage"
+                    className="recruiterImage"
+                  ></img>
+                </div>
               </div>
             </>
           )}
         </div>
-       
-      
-      <div className="part-two">
-      <h3 style={{display: 'flex', justifyContent:"space-evenly", alignItems:"center"}}>
-        {logIn && (
-          <>
-            <img
-            className="logoImg"
-              src={formData.logo} // Use the provided logo URL
-              onError={(e) => {
-                // If there's an error loading the image, use the default image
-                e.target.onerror = null; // Prevent infinite loop if default image also fails to load
-                e.target.src = jobLogo; // Use the default image URL
-              }}
-              alt="Job Logo"
-              
-            />
-            
-          </>
-        )}
-        {formData.position}{" "}
-        {formData.jobPlace === "remote" || formData.jobPlace === "Remote"
-          ? `work from home  Job / Internship at ${formData.companyName}`
-          : ""}
-          
-      </h3>
-      </div>
+
+        <div className="part-two">
+          <h3
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+            }}
+          >
+            {logIn && (
+              <>
+                <img
+                  className="logoImg"
+                  src={formData.logo} // Use the provided logo URL
+                  onError={(e) => {
+                    // If there's an error loading the image, use the default image
+                    e.target.onerror = null; // Prevent infinite loop if default image also fails to load
+                    e.target.src = jobLogo; // Use the default image URL
+                  }}
+                  alt="Job Logo"
+                />
+              </>
+            )}
+            {formData.position}{" "}
+            {formData.jobPlace === "remote" || formData.jobPlace === "Remote"
+              ? `work from home  Job / Internship at ${formData.companyName}`
+              : ""}
+          </h3>
+        </div>
       </div>
       <div className="mainDiv">
         <div className="timePart">
@@ -191,18 +203,44 @@ function JobDetail() {
           <p className="locationPart">{formData.location}</p>
           <div className="stipendAndDuration">
             <div>
-           <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row', gap:'20px', color:'#999999'}}>
-            <span class="material-symbols-outlined" style={{color:'#999999'}}>payments</span>
-            <p>Stipend</p>
-            </div>
-            <p style={{marginTop:'2px'}}>Rs {formData.salary}/month</p>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "row",
+                  gap: "20px",
+                  color: "#999999",
+                }}
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style={{ color: "#999999" }}
+                >
+                  payments
+                </span>
+                <p>Stipend</p>
+              </div>
+              <p style={{ marginTop: "2px" }}>Rs {formData.salary}/month</p>
             </div>
             <div>
-            <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row', gap:'20px', color:'#999999'}}>
-            <span class="material-symbols-outlined" style={{color:'#999999'}}>calendar_clock</span>
-            <p>Duration</p>
-            </div>
-            <p style={{marginTop:'2px'}}>6 Months</p>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "row",
+                  gap: "20px",
+                  color: "#999999",
+                }}
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style={{ color: "#999999" }}
+                >
+                  calendar_clock
+                </span>
+                <p>Duration</p>
+              </div>
+              <p style={{ marginTop: "2px" }}>6 Months</p>
             </div>
           </div>
           <h3 className="aboutCompany">About Company</h3>
@@ -211,11 +249,12 @@ function JobDetail() {
           <p className="aboutJobPara">{formData.description}</p>
           <h3 className="skillReq">Skill(s) Required</h3>
           <div>
-           
             <ul className="ul-skills">
               {formData.skills && formData.skills.length > 0 ? (
                 formData.skills.map((skill, index) => (
-                  <div className="skillReqPara" key={index}>{skill}</div>
+                  <div className="skillReqPara" key={index}>
+                    {skill}
+                  </div>
                 ))
               ) : (
                 <li>No skills found</li>

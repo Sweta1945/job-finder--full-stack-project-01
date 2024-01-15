@@ -1,102 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-body{
-    /* overflow:hidden; */
-     margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+body {
+  /* overflow:hidden; */
+  margin: 0;
   padding: 0;
   height: 100%;
 }
 
-.login-container{
-    display: flex;
-    flex-direction: row;
-    
-   
+.login-container {
+  display: flex;
+  flex-direction: row;
 }
-.left-side{
-    margin-top: 30px;
-    width: 60%;
-    margin-left: 30px;
-
+.left-side {
+  margin-top: 30px;
+  width: 60%;
+  margin-left: 30px;
 }
-.right-side{
-    width: 40%;
+.right-side {
+  width: 40%;
 }
-.text4{
-    margin-top: 30px;
-    margin-bottom: 20px;
-
+.text4 {
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-   gap: 14px;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.email, .password {
-
-    
-    border: 2px solid #C2C2C2 ;
-    width: 60%;
-    height: 40px;
-    font-family: DM Sans;
-font-size: 18px;
-font-weight: 500;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: left;
-padding-left: 20px;
-background-color: rgb(223, 243, 252);
-
-
+.email,
+.password {
+  border: 2px solid #c2c2c2;
+  width: 60%;
+  height: 40px;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 20px;
+  background-color: rgb(223, 243, 252);
 }
 
-.submitButton{
-    width: 300px;
-    height: 45px;
-    background-color:
-    #ED5353 ;
-    font-family: 
-    DM Sans;
-    font-weight: 700;
-    font-size: 18px;
-    color: #FFFFFF;
-    border:1px solid black;
-    border-radius: 5px;
+.submitButton {
+  width: 300px;
+  height: 45px;
+  background-color: #ed5353;
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .error {
   color: red;
   font-size: 14px;
 }
 button {
+  /* Other styles */
+  opacity: 0.8; /* Reduces opacity slightly to indicate interactivity */
+}
+
+button:hover {
+  cursor: pointer;
+
+  opacity: 1; /* Returns to full opacity on hover */
+}
+
+strong {
+  margin-left: 8px;
+  color: black;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #c2c2c2;
+  cursor: pointer;
+}
+.registerimg {
+  height: 100%;
+  width: 40vw;
+}
+
+.signUp {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+  body {
+    /* overflow:hidden; */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .left-side {
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 30px;
+  }
+
+  .text4 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .email,
+  .password {
+    border: 2px solid #c2c2c2;
+    width: 120%;
+    height: 40px;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 20px;
+    background-color: rgb(223, 243, 252);
+  }
+
+  .submitButton {
+    width: 300px;
+    height: 45px;
+    background-color: #ed5353;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  button {
     /* Other styles */
     opacity: 0.8; /* Reduces opacity slightly to indicate interactivity */
-    
   }
-  
+
   button:hover {
     cursor: pointer;
 
     opacity: 1; /* Returns to full opacity on hover */
   }
 
-  strong{
+  strong {
     margin-left: 8px;
     color: black;
   }
 
   input[type="checkbox"]:checked {
-    background-color:#C2C2C2 ;
+    background-color: #c2c2c2;
     cursor: pointer;
-
   }
-  .registerimg{
-    
-height: 100%;
-width: 40vw;
-
+  .registerimg {
+    height: 80%;
+    width: 100vw;
   }
 
-  .signUp{
+  .signUp {
     cursor: pointer;
-
   }
+
+  .text1 {
+    width: 120%;
+  }
+}

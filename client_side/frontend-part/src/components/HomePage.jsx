@@ -57,15 +57,15 @@ function HomePage() {
   //handleing skills that i choose from drop down should get display at bottom
   const handleSkillSelection = (event) => {
     const selectedSkill = event.target.value; //here am getting the selected skills from drop down
-   // Check if the selected skill already exists in the selectedSkills array
-  if (!selectedSkills.includes(selectedSkill)) {
-    const updatedSkills = [...selectedSkills, selectedSkill]; // Add the selected skill to the existing selectedSkills
-    setSelectedSkills(updatedSkills); // Update the selectedSkills state with the new skill(s)
-  }
+    // Check if the selected skill already exists in the selectedSkills array
+    if (!selectedSkills.includes(selectedSkill)) {
+      const updatedSkills = [...selectedSkills, selectedSkill]; // Add the selected skill to the existing selectedSkills
+      setSelectedSkills(updatedSkills); // Update the selectedSkills state with the new skill(s)
+    }
 
-  // Trigger job filtering every time a skill is selected
-  handleFilteredJob();
-};
+    // Trigger job filtering every time a skill is selected
+    handleFilteredJob();
+  };
 
   //useeffect to check person is logged in or not
   useEffect(() => {
@@ -79,14 +79,16 @@ function HomePage() {
       setIsLoggedIn(false);
     }
   }, []);
- 
+
   //useeffct to fetch the details from job form from backend
 
   useEffect(() => {
     async function fetchJobDetails() {
       try {
-        const response = await fetch("https://backend-server-1yct.onrender.com/job/job-info");
-       
+        const response = await fetch(
+          "https://backend-server-1yct.onrender.com/job/job-info"
+        );
+
         if (response.ok) {
           // console.log(response);
           const data = await response.json();
@@ -142,52 +144,33 @@ function HomePage() {
                     e.target.src = jobLogo; // Use the default image URL
                   }}
                   alt="Job Logo"
-                  style={{ width: "50px", height: "50px", marginTop:'30px' }} // Set your preferred styling
+                  style={{ width: "50px", height: "50px", marginTop: "30px" }} // Set your preferred styling
                 />
 
+                <h3 className="companyName">{job.companyName}</h3>
+
                 <div className="leftDiv-right">
-                  <div style={{display: "flex", justifyContent:"space-between"}}>
-                  <h3 className="companyName">{job.companyName}</h3>
-                  <div className="skill-show">
-                    {job.skillsRequired.map((skill, index) => (
-                  <div key={index} className="skillRendering">
-                    {skill}{" "}
-                    
-                  </div>
-                ))}
-                  </div>
+                  <div className="LEFT-Div-Right">
+                    <div className="skill-show">
+                      {job.skillsRequired.map((skill, index) => (
+                        <div key={index} className="skillRendering">
+                          {skill}{" "}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   <div className="class-one">
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                        
-                      }}
-                    >
+                    <div className="GROUP">
                       <span class="material-symbols-outlined">groups</span>
-                      <p >11-50</p>
+                      <p>11-50</p>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                      }}
-                    >
+                    <div className="CURRENCY">
                       <span class="material-symbols-outlined">
                         currency_rupee
                       </span>
                       <p>{job.salary}</p>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                      }}
-                    >
+                    <div className="LOCATION">
                       <img src={indianFlag} alt="indian flag"></img>
                       <p>{job.location}</p>
                     </div>
@@ -196,40 +179,44 @@ function HomePage() {
                   <div
                     style={{
                       display: "flex",
-                      gap:'37vw',
-                    
-                      marginTop:'0', marginBottom:'0',
-                      height:'10px'
+                      gap: "37vw",
+
+                      marginTop: "0",
+                      marginBottom: "0",
+                      height: "10px",
                     }}
                   >
-                    <div  style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "20px",
-                      marginTop:'0', marginBottom:'0',
-                      height:'20px',
-                    
-                    }}>
-                    <p style={{width:'80px'}}> {job.jobPlace}</p>
-                    <p style={{width:'80px'}}>{job.jobType} </p>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "20px",
+                        marginTop: "0",
+                        marginBottom: "0",
+                        height: "20px",
+                      }}
+                    >
+                      <p style={{ width: "80px" }}> {job.jobPlace}</p>
+                      <p style={{ width: "80px" }}>{job.jobType} </p>
                     </div>
-                   
+
                     <div className="jobRender-rightDiv">
-                {isLoggedIn && (
-                  <>
-                    <Link to={`/editJobForm/${job._id}`}>
-                      <button className="editJob">Edit job </button>
-                    </Link>
-                  </>
-                )}
-                <Link to={`/jobDetail/${job._id}?isLoggedIn=${isLoggedIn}`}>
-                  <button className="viewDetail">view details</button>
-                </Link>
-              </div>
+                      {isLoggedIn && (
+                        <>
+                          <Link to={`/editJobForm/${job._id}`}>
+                            <button className="editJob">Edit job </button>
+                          </Link>
+                        </>
+                      )}
+                      <Link
+                        to={`/jobDetail/${job._id}?isLoggedIn=${isLoggedIn}`}
+                      >
+                        <button className="viewDetail">view details</button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -248,52 +235,32 @@ function HomePage() {
                     e.target.src = jobLogo; // Use the default image URL
                   }}
                   alt="Job Logo"
-                  style={{ width: "50px", height: "50px", marginTop:'30px' }} // Set your preferred styling
+                  style={{ width: "50px", height: "50px", marginTop: "30px" }} // Set your preferred styling
                 />
 
                 <div className="leftDiv-right">
-                  <div style={{display: "flex", justifyContent:"space-between"}}>
-                  <h3 className="companyName">{job.companyName}</h3>
-                  <div className="skill-show">
-                    {job.skillsRequired.map((skill, index) => (
-                  <div key={index} className="skillRendering">
-                    {skill}{" "}
-                    
-                  </div>
-                ))}
-                  </div>
+                  <div className="LEFT-DIV-RIGHT">
+                    <h3 className="companyName">{job.companyName}</h3>
+                    <div className="skill-show">
+                      {job.skillsRequired.map((skill, index) => (
+                        <div key={index} className="skillRendering">
+                          {skill}{" "}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   <div className="class-one">
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                        
-                      }}
-                    >
+                    <div className="GROUP">
                       <span class="material-symbols-outlined">groups</span>
-                      <p >11-50</p>
+                      <p>11-50</p>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                      }}
-                    >
+                    <div className="CURRENCY">
                       <span class="material-symbols-outlined">
                         currency_rupee
                       </span>
                       <p>{job.salary}</p>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                      }}
-                    >
+                    <div className="LOCATION">
                       <img src={indianFlag} alt="indian flag"></img>
                       <p>{job.location}</p>
                     </div>
@@ -302,40 +269,44 @@ function HomePage() {
                   <div
                     style={{
                       display: "flex",
-                      gap:'37vw',
-                    
-                      marginTop:'0', marginBottom:'0',
-                      height:'10px'
+                      gap: "37vw",
+
+                      marginTop: "0",
+                      marginBottom: "0",
+                      height: "10px",
                     }}
                   >
-                    <div  style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "20px",
-                      marginTop:'0', marginBottom:'0',
-                      height:'20px',
-                    
-                    }}>
-                    <p style={{width:'80px'}}> {job.jobPlace}</p>
-                    <p style={{width:'80px'}}>{job.jobType} </p>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "20px",
+                        marginTop: "0",
+                        marginBottom: "0",
+                        height: "20px",
+                      }}
+                    >
+                      <p style={{ width: "80px" }}> {job.jobPlace}</p>
+                      <p style={{ width: "80px" }}>{job.jobType} </p>
                     </div>
-                   
+
                     <div className="jobRender-rightDiv">
-                {isLoggedIn && (
-                  <>
-                    <Link to={`/editJobForm/${job._id}`}>
-                      <button className="editJob">Edit job </button>
-                    </Link>
-                  </>
-                )}
-                <Link to={`/jobDetail/${job._id}?isLoggedIn=${isLoggedIn}`}>
-                  <button className="viewDetail">view details</button>
-                </Link>
-              </div>
+                      {isLoggedIn && (
+                        <>
+                          <Link to={`/editJobForm/${job._id}`}>
+                            <button className="editJob">Edit job </button>
+                          </Link>
+                        </>
+                      )}
+                      <Link
+                        to={`/jobDetail/${job._id}?isLoggedIn=${isLoggedIn}`}
+                      >
+                        <button className="viewDetail">view details</button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -343,22 +314,20 @@ function HomePage() {
     }
   };
 
-  
-const handleClearSkills = () => {
-  setSelectedSkills([]); // Set selectedSkills array to an empty array
-};
+  const handleClearSkills = () => {
+    setSelectedSkills([]); // Set selectedSkills array to an empty array
+  };
   const handleCross = (skillToRemove) => {
     const updatedSkills = selectedSkills.filter(
       (skill) => skill !== skillToRemove
     );
     setSelectedSkills(updatedSkills);
   };
-//this will make the name's first letter capital of the name->fetched from local storag to display as recruiter's name
-  const storedUser = localStorage.getItem('user');
-  const formattedUser = storedUser ? storedUser.charAt(0).toUpperCase() + storedUser.slice(1) : '';
-
-
-
+  //this will make the name's first letter capital of the name->fetched from local storag to display as recruiter's name
+  const storedUser = localStorage.getItem("user");
+  const formattedUser = storedUser
+    ? storedUser.charAt(0).toUpperCase() + storedUser.slice(1)
+    : "";
 
   return (
     <div className="homepage">
@@ -369,10 +338,8 @@ const handleClearSkills = () => {
           <img src={upperRect} alt="upperRect" className="upperRect"></img>
           <img src={leftRect} alt="leftRect" className="leftRect"></img>
           <h2 className="jobFinder">Job Finder</h2>
-
         </div>
         <div className="top-part">
-
           {!isLoggedIn && (
             <>
               <Link to="/login">
@@ -388,27 +355,20 @@ const handleClearSkills = () => {
               <button onClick={handleLogout} className="logout">
                 Logout
               </button>
-            
-              <div
-                style={{
-                  display: "flex",
-                  gap: "10px",
-                  marginRight: "100px",
-                  marginTop: "60px",
-                  width: "260px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                
-                <h3 className="hello-recruiter">    Hello! {formattedUser ? formattedUser : "Recruiter"}
 
-</h3>
-                <img
-                  src={recruiterImage}
-                  alt="recruiterImage"
-                  className="recruiterImage"
-                ></img>
+              <div className="textAndImage">
+                <h3 className="hello-recruiter">
+                  {" "}
+                  Hello! {formattedUser ? formattedUser : "Recruiter"}
+                </h3>
+
+                <div className="RECRUITER-LOGO">
+                  <img
+                    src={recruiterImage}
+                    alt="recruiterImage"
+                    className="recruiterImage"
+                  ></img>
+                </div>
               </div>
             </>
           )}
@@ -418,21 +378,22 @@ const handleClearSkills = () => {
       <div className="middle-part">
         <div className="container">
           <div className="inputAndSearch">
-          <input
-            className="findJobInput"
-            type="text"
-            placeholder="Type any job title to search"
-            onChange={handleTitleChange}
-          />
-          <img
-            src={searchIcon}
-            className="search"
-            onClick={handleFilteredJob}
-          ></img>
-          <p className="clear" onClick={handleClearSkills}>Clear</p>
-
+            <input
+              className="findJobInput"
+              type="text"
+              placeholder="Type any job title to search"
+              onChange={handleTitleChange}
+            />
+            <img
+              src={searchIcon}
+              className="search"
+              onClick={handleFilteredJob}
+            ></img>
+            <p className="clear" onClick={handleClearSkills}>
+              Clear
+            </p>
           </div>
-         
+
           <br />
           <span className="skillAndClear">
             <select

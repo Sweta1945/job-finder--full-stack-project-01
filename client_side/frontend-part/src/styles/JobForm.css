@@ -1,180 +1,164 @@
-
-
-
 .addJobForm {
-    display: flex;
-    flex-direction: row;
-background-color: #f9f1f1;
-
+  display: flex;
+  flex-direction: row;
+  background-color: #f9f1f1;
 }
 
-.form-leftSide{
-    width: 60%;
-    padding-left: 30px;
+.buttonDiv {
+  display: flex;
+  gap: 40px;
+  margin-left: 60%;
+}
+.form-leftSide {
+  width: 60%;
+  padding-left: 30px;
 }
 
-.form-rightSide{
-    width: 40%;
-    position: relative;
-    
+.form-rightSide {
+  width: 40%;
+  position: relative;
 }
 
-.addJobText{
-    font-family: DM Sans;
-font-size: 40px;
-font-weight: 700;
-line-height: 58px;
-letter-spacing: 0em;
-text-align: left;
-margin-bottom: 0;
-
+.addJobText {
+  font-family: DM Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 0;
 }
-.rightSideText{
-    font-family: DM Sans;
-font-size: 35px;
-font-weight: 500;
-line-height: 58px;
-letter-spacing: 0em;
-text-align: center;
-color: #FFFFFF;
-z-index: 1000;
-position: absolute;
-top:0;
-margin-left: 20px;
-
-
+.rightSideText {
+  font-family: DM Sans;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  margin-left: 20px;
 }
 
-.label_companyName, .label_logo, .label_position, .label_salary, .label_type, .remoteOrOffice, .label_location,  .label_jobDescription, .label_about, .label_skills{
-    font-family: DM Sans;
-font-size: 23px;
-font-weight: 400;
-line-height: 30px;
-letter-spacing: 0em;
-text-align: left;
-
-
+.label_companyName,
+.label_logo,
+.label_position,
+.label_salary,
+.label_type,
+.remoteOrOffice,
+.label_location,
+.label_jobDescription,
+.label_about,
+.label_skills {
+  font-family: DM Sans;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.formAddJob{
-    display: flex;
-    flex-direction: column;
-    gap:30px
+.formAddJob {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.input_company, .input_logo, .input_position, .input_salary,  .input_location{
-width: 500px;
-height: 25px;
-border:1px grey solid;
-border-radius: 6px;
-
-
+.input_company,
+.input_logo,
+.input_position,
+.input_salary,
+.input_location {
+  width: 500px;
+  height: 25px;
+  border: 1px grey solid;
+  border-radius: 6px;
 }
 
-
-.input_company{
-    margin-left: 27px;
-    border:1px grey solid;
-border-radius: 6px;
+.input_company {
+  margin-left: 27px;
+  border: 1px grey solid;
+  border-radius: 6px;
 }
- .input_logo{
-    margin-left: 54px;
-    border:1px grey solid;
-border-radius: 6px;
- }
- .input_position{
-    margin-left: 60px;
-    border:1px grey solid;
-border-radius: 6px;
- }
- .input_salary{
-    margin-left: 37px;
-    border:1px grey solid;
-border-radius: 6px;
- }
- .input_location{
-    margin-left: 100px;
-    border:1px grey solid;
-border-radius: 6px;
- }
- .input_type{
-    margin-left: 95px;
-    border:1px grey solid;
-border-radius: 6px;
- }
- .input_remoteOrOffice{
-    margin-left: 45px;
-    border:1px grey solid;
-border-radius: 6px;
-
- }
-  .input_type, .input_remoteOrOffice{
+.input_logo {
+  margin-left: 54px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_position {
+  margin-left: 60px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_salary {
+  margin-left: 37px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_location {
+  margin-left: 100px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_type {
+  margin-left: 95px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_remoteOrOffice {
+  margin-left: 45px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_type,
+.input_remoteOrOffice {
   width: 150px;
   height: 28px;
-  }
-   
-  
-    
-      .input_description
-      {  
+}
 
-        margin-left: 25px;
-        width: 500px;
-        height: 70px;
-        border:1px grey solid;
-border-radius: 6px;
+.input_description {
+  margin-left: 25px;
+  width: 500px;
+  height: 70px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_about {
+  margin-left: 22px;
+  width: 500px;
+  height: 70px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.input_skills {
+  width: 500px;
+  height: 25px;
+  margin-left: 45px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
 
-      }
-       .input_about
-       {
-        margin-left: 22px;
-        width: 500px;
-        height: 70px;
-        border:1px grey solid;
-border-radius: 6px;
+.cancelB,
+.addJobB {
+  width: 120px;
+  height: 34px;
+  border-radius: 7px;
+}
 
-       }
-        .input_skills{
+.cancelB {
+  background-color: white;
+  border: 1px rgb(150, 141, 141) solid;
+}
 
-            width: 500px;
-            height: 25px;
-            margin-left: 45px;
-            border:1px grey solid;
-border-radius: 6px;
-       }
+.addJobB {
+  background-color: red;
+  color: white;
+  border: 1px rgb(150, 141, 141) solid;
+}
 
-       .buttonDiv{
-        display: flex;
-        gap:40px;
-        margin-left:60%;
-       
-        
-
-       }
-
-       .cancelB, .addJobB{
-        width: 120px;
-        height: 34px;
-        border-radius: 7px;
-       
-       }
-
-       .cancelB{
-        background-color: white;
-        border: 1px rgb(150, 141, 141) solid
-
-       }
-
-       .addJobB{
-        background-color: red;
-        color: white;
-        border: 1px rgb(150, 141, 141) solid
-
-       }
-
-
-
-       /* Add this CSS to your JobForm.css file */
+/* Add this CSS to your JobForm.css file */
 /* Adjust padding and placeholder styles for input fields */
 .input_company,
 .input_logo,
@@ -188,7 +172,7 @@ border-radius: 6px;
 .input_skills {
   padding-left: 10px; /* Adjust padding to shift the input to the right */
   font-family: DM Sans;
- 
+
   line-height: 24px;
   color: #333; /* Adjust placeholder color */
 }
@@ -205,11 +189,10 @@ border-radius: 6px;
 .input_about::placeholder,
 .input_skills::placeholder {
   font-family: DM Sans;
- 
+
   line-height: 24px;
   color: #cac1c1; /* Adjust placeholder color */
 }
-
 
 .input_type,
 .input_remoteOrOffice,
@@ -218,7 +201,7 @@ border-radius: 6px;
   height: 28px;
   border: 1px grey solid;
   border-radius: 6px;
-  padding-left: 10px; 
+  padding-left: 10px;
 }
 
 .select-dropdown {
@@ -231,3 +214,182 @@ border-radius: 6px;
   background-size: 16px; /* Adjust arrow size */
 }
 
+@media (max-width: 767px) {
+  .addJobForm {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #f9f1f1;
+  }
+
+  .form-rightSide {
+    width: 40%;
+    position: relative;
+  }
+
+  .addJobText {
+    font-family: DM Sans;
+    font-size: 25px;
+    width: 400px;
+    margin-left: 30px;
+    font-weight: 400;
+  }
+  .rightSideText {
+    font-family: DM Sans;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    margin-left: 30px;
+    width: 300px;
+  }
+
+  .label_companyName,
+  .label_logo,
+  .label_position,
+  .label_salary,
+  .label_type,
+  .remoteOrOffice,
+  .label_location,
+  .label_jobDescription,
+  .label_about,
+  .label_skills {
+    font-family: DM Sans;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .formAddJob {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .input_company,
+  .input_logo,
+  .input_position,
+  .input_salary,
+  .input_location {
+    width: 500px;
+    height: 25px;
+    border: 1px grey solid;
+    border-radius: 6px;
+    margin-right: 70px;
+  }
+
+  .input_company {
+    margin-left: 20px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_logo {
+    margin-left: 28px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_position {
+    margin-left: 30px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_salary {
+    margin-left: 28px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_location {
+    margin-left: 34px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_type {
+    margin-left: 30px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_remoteOrOffice {
+    margin-left: 28px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_type,
+  .input_remoteOrOffice {
+    width: 150px;
+    height: 28px;
+  }
+
+  .input_description {
+    margin-left: 35px;
+    width: 500px;
+    height: 70px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_about {
+    margin-left: 35px;
+    width: 500px;
+    height: 70px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+  .input_skills {
+    width: 500px;
+    height: 25px;
+    margin-left: 30px;
+    border: 1px grey solid;
+    border-radius: 6px;
+  }
+
+  .buttonDiv {
+    display: flex;
+    gap: 40px;
+    width: 400px;
+    margin-left: 40px;
+  }
+
+  .cancelB,
+  .addJobB {
+    width: 120px;
+    height: 34px;
+    border-radius: 7px;
+  }
+
+  .cancelB {
+    background-color: white;
+    border: 1px rgb(150, 141, 141) solid;
+  }
+
+  .addJobB {
+    background-color: red;
+    color: white;
+    border: 1px rgb(150, 141, 141) solid;
+    width: 100px;
+  }
+
+  /* Add this CSS to your JobForm.css file */
+  /* Adjust padding and placeholder styles for input fields */
+  .input_company,
+  .input_logo,
+  .input_position,
+  .input_salary,
+  .input_type,
+  .input_remoteOrOffice,
+  .input_location,
+  .input_description,
+  .input_about,
+  .input_skills {
+    padding-left: 10px; /* Adjust padding to shift the input to the right */
+    font-family: DM Sans;
+
+    line-height: 18px;
+    color: #333; /* Adjust placeholder color */
+    width: 110%;
+  }
+}

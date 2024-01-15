@@ -1,170 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@1,100&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@1,100&display=swap');
-
-body{
+body {
   overflow-x: hidden;
-  
 }
 
-.homepage{
-height: 100%; 
-width: 100%;
-margin-bottom: 200px;
-  
-  
+.homepage {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 200px;
 }
 
+.textAndImage {
+  display: flex;
+  gap: 10px;
+  margin-right: 100px;
+  margin-top: 60px;
+  width: 260px;
+  justify-content: center;
+  align-items: center;
+}
 
- .mainRect{
-  width:100vw;
-  height:140px
-  
- }
- .mainRect-container{
+.mainRect {
+  width: 100vw;
+  height: 140px;
+}
+.mainRect-container {
   position: relative;
- }
- .rightRect{
+}
+.rightRect {
   position: absolute;
   left: 66%;
   top: 0;
-  transform: translate(4%, -104%); 
- 
-
-  
- }
- .upperRect{
+  transform: translate(4%, -104%);
+}
+.upperRect {
   position: absolute;
-  left:50%;
-  top:0;
+  left: 50%;
+  top: 0;
   transform: translate(-50%, -160%);
- }
+}
 
- .leftRect{
+.leftRect {
   position: absolute;
   right: 78;
   bottom: 0;
   transform: translate(-1%, -8%);
- }
-  .recruiterImage {
-    border: 1px white solid;
-   
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    margin-top: 10px;
-  }
-  .hello-recruiter{
-   
-    color: white;
-    font-family: DM Sans;
-font-size: 20px;
-font-weight: 500;
-line-height: 33px;
-letter-spacing: 0em;
-text-align: center;
+}
+.recruiterImage {
+  border: 1px white solid;
 
-   
-  }
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  margin-top: 10px;
+}
+.hello-recruiter {
+  color: white;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+}
 
-  .jobFinder {
-    font-family: DM Sans;
-font-size: 30px;
-font-weight: 700;
-line-height: 43px;
-letter-spacing: 0em;
-text-align: center;
-color: white;
-position: absolute;
-right:76vw;
-top:0;
-transform: translate(-50%, -310%);
-width: 200px;
+.jobFinder {
+  font-family: DM Sans;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  position: absolute;
+  right: 76vw;
+  top: 0;
+  transform: translate(-50%, -310%);
+  width: 200px;
+}
 
-  }
+.loginB,
+.registerB {
+  width: 120px;
+  height: 40px;
+  margin-right: 40px;
+  margin-top: 110px;
+  border: 1px white solid;
+  border-radius: 10px;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  background-color: #ff6b6b;
+}
+.registerB {
+  margin-right: 90px;
+  color: red;
+  background-color: white;
+}
+.top-part {
+  position: absolute;
+  top: 2%; /* Adjust this value to place it where you want vertically */
+  left: 90%; /* Adjust this value to place it where you want horizontally */
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures it's above the image */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.CURRENCY {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.GROUP {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.LOCATION {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  .loginB, .registerB{
-    width: 120px;height: 40px;
-    margin-right: 40px;
-    margin-top: 110px;
-    border:1px white solid;border-radius: 10px;
-    font-family: DM Sans;
-font-size: 20px;
-font-weight: 500;
-line-height: 33px;
-letter-spacing: 0em;
-text-align: center;
-color: white;
-background-color: #FF6B6B;
+.middle-part {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  margin-left: 100px;
+}
+.findJobInput {
+  width: 80%;
+  height: 38px;
+  position: relative;
+  padding-left: 70px;
+  font-family: DM Sans;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 1.8px solid #e3e3e3;
+  display: flex;
 
-  }
-  .registerB{
-    margin-right: 90px;
-    color: red;
-    background-color: white;
-  }
-  .top-part {
-    position: absolute;
-    top: 2%; /* Adjust this value to place it where you want vertically */
-    left: 90%; /* Adjust this value to place it where you want horizontally */
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Ensures it's above the image */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-  }
-
-  .middle-part {
-    display: flex;
-    justify-content: center;
- 
-  }
-  .container{
-   
-    margin-left: 100px;
-    
-  }
- .findJobInput{
-   width: 80%;
-   height: 38px;
-   position: relative;
-   padding-left:70px ;
-   font-family: DM Sans;
-font-size: 21px;
-font-weight: 500;
-line-height: 33px;
-letter-spacing: 0em;
-text-align: left;
-border: 1.8px solid #E3E3E3;
-display: flex;
-
-margin-left: 30px;
-
-
-  
- } 
-.findJobInput::placeholder{
+  margin-left: 30px;
+}
+.findJobInput::placeholder {
   font-size: 20px;
   margin-left: 40px;
 }
- 
-  
-.middle-part{
+
+.middle-part {
   display: flex;
   flex-direction: column;
-  
-  border: 0.5px 
-  #FFFFFF solid;
+
+  border: 0.5px #ffffff solid;
   margin-left: 120px;
   margin-right: 120px;
-  margin-top:40px;
+  margin-top: 40px;
   height: 200px;
-  box-shadow: 0px 0px 22px 4px #FF202040;
-
+  box-shadow: 0px 0px 22px 4px #ff202040;
 }
-
-
-
 
 /* .skillAndClear{
   display: flex;
@@ -173,12 +174,11 @@ margin-left: 30px;
   
 } */
 
-
 .skill-show {
   display: flex;
   align-items: center;
 }
-.addJob{
+.addJob {
   position: absolute;
   left: 80%;
 
@@ -186,82 +186,74 @@ margin-left: 30px;
   background-color: red;
   color: white;
   font-family: DM Sans;
-font-size: 20px;
-font-weight: 500;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: center;
-border: 2px red solid;
-width: 130px;
-height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  border: 2px red solid;
+  width: 130px;
+  height: 40px;
 
-border-radius: 10px;
-
-
+  border-radius: 10px;
 }
-.logout{
+.logout {
   width: 100px;
   height: 50px;
   color: white;
-  background-color: 
-  #FF6B6B;
-  border: 1px 
-  #FF6B6B solid;
+  background-color: #ff6b6b;
+  border: 1px #ff6b6b solid;
   border-radius: 5px;
   margin-top: 60px;
   font-family: DM Sans;
-font-size: 20px;
-font-weight: 500;
-line-height: 33px;
-letter-spacing: 0em;
-text-align: center;
-
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
 }
-.dropdown{
+.dropdown {
   width: 120px;
   height: 30px;
-  border: 2px solid #CECECE;
-    border-radius: 5px;
-background-color: #FFFFFF;
-font-family: DM Sans;
-font-size: 16px;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: center;
-
-
+  border: 2px solid #cecece;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
 }
-.skillAndClear{
+.skillAndClear {
   display: flex;
-  gap:40px;
+  gap: 40px;
   align-items: center;
 }
-.skillRendering{
-  width: 115px;height: 24px;
-  background-color:  #FFEEEE;
-  display: inline-block; 
+.skillRendering {
+  width: 115px;
+  height: 24px;
+  background-color: #ffeeee;
+  display: inline-block;
   margin-right: 30px;
   padding-left: 10px;
   position: relative;
   margin-top: 4px;
   font-family: DM Sans;
-font-size: 16px;
-font-weight: 500;
-line-height: 23px;
-letter-spacing: 0em;
-text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
 
- 
-  
   align-items: center;
-
 }
-.x{
+
+.x {
   background-color: #cd5252;
   color: white;
   position: absolute;
-  cursor:pointer;
+  cursor: pointer;
   left: 100%;
   top: 0;
   width: 15px;
@@ -269,23 +261,20 @@ text-align: center;
   justify-content: center;
   height: 24px;
   align-items: center;
-
-  
 }
-.x:hover{
+.x:hover {
   background-color: red;
-  color:white;
-  
+  color: white;
 }
-.inputAndSearch{
+.inputAndSearch {
   display: flex;
   flex-direction: row;
-  gap:40px;
+  gap: 40px;
   align-items: center;
   position: relative;
 }
 
-.search{
+.search {
   position: absolute;
   top: 15%;
   transform: translate(140%, 48%);
@@ -294,147 +283,550 @@ text-align: center;
   margin-left: 20px;
 }
 
-.clear{
+.clear {
   position: absolute;
   left: 50%;
-  top:90%;
+  top: 90%;
   transform: translate(-20%, 160%);
   color: red;
   font-family: DM Sans;
-font-size: 17px;
-font-weight: 500;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: center;
-cursor: pointer;
-
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
 }
 
-.skillAndClear{
+.skillAndClear {
   margin-top: 30px;
-  
 }
 
-
-.renderingJob{
+.renderingJob {
   margin-top: 40px;
-  border-left:4px red solid;
-  box-shadow: 0 0 4px #FF2020;
-  padding:15px;
+  border-left: 4px red solid;
+  box-shadow: 0 0 4px #ff2020;
+  padding: 15px;
   font-family: DM Sans;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: center;
-  box-shadow: 0px 0px 22px 4px #FF202040;
-
-
-  
-
+  box-shadow: 0px 0px 22px 4px #ff202040;
 }
 
-.details{
+.LEFT-Div-Right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.LEFT-DIV-RIGHT {
+  display: flex;
+  justify-content: space-between;
+}
+.details {
   margin-left: 80%;
 }
 
-
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 .bottom-part {
   display: flex;
   flex-direction: column;
-  
-  border: 0.5px 
-  #FFFFFF solid;
+
+  border: 0.5px #ffffff solid;
   margin-left: 80px;
   margin-right: 120px;
   height: 200px;
-
 }
 
-.jobRender-leftDiv{
+.jobRender-leftDiv {
   display: flex;
   flex-direction: row;
-  gap:30px;
-  
+  gap: 30px;
 }
 
-.class-one{
+.class-one {
   display: flex;
   flex-direction: row;
-  gap:80px;
-  
+  gap: 80px;
 }
 
-.class-two{
+.class-two {
   margin-left: 40px;
   display: flex;
-  
 
   width: 10px;
 }
 
-.jobRender-rightDiv{
+.jobRender-rightDiv {
   display: flex;
   float: row;
-  gap:20px;
-
- 
-
- 
+  gap: 20px;
+  margin-left: 40px;
 }
-.job-rendering{
-  height:100px;
+.job-rendering {
+  height: 100px;
   padding-bottom: 10px;
- 
-  
 }
-.editJob, .viewDetail{
-  border: 2px solid #ED5353;
+.editJob,
+.viewDetail {
+  border: 2px solid #ed5353;
   width: 100px;
-height: 30px;
+  height: 30px;
 
-border-radius: 5px;
-
+  border-radius: 5px;
 }
-.editJob{
+.editJob {
   color: red;
 }
-.viewDetail{
+.viewDetail {
   color: white;
   background-color: red;
 }
-.leftDiv-right{
+.leftDiv-right {
   font-family: Roboto;
-font-size: 19px;
-font-weight: 500;
-letter-spacing: 0em;
-text-align: left;
-height: 20px;
-
-
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  height: 20px;
 }
-.companyName{
+.companyName {
   width: 10vwpx;
   margin-top: 0;
   margin-bottom: 0;
-  
 }
 
-.class-three{
+.class-three {
   display: "flex";
-  align-items: "center" ;
+  align-items: "center";
   width: 10px;
-  
-
 }
 
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .homepage {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
+  .mainRect {
+    width: 100vw;
+    height: 140px;
+  }
+  .mainRect-container {
+    position: relative;
+  }
+  .rightRect {
+    position: absolute;
+    width: 45vw;
+    height: 20vh;
+    left: 48%;
+    top: 0;
+    transform: translate(12%, -107%);
+  }
+  .upperRect {
+    width: 40vw;
+    height: 20vh;
+    position: absolute;
+    left: 20%;
+    top: 2px;
+    transform: translate(-5%, -160%);
+  }
 
+  .leftRect {
+    width: 40vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-4%, -4%);
+  }
+  .recruiterImage {
+    border: 1px white solid;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-right: 90px;
+  }
+  .hello-recruiter {
+    color: white;
+    font-family: DM Sans;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0em;
+    position: absolute;
+    left: 30%;
+  }
+
+  .jobFinder {
+    font-family: DM Sans;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 70px;
+    top: 0;
+    transform: translate(-50%, -310%);
+    width: 200px;
+  }
+  .logout {
+    width: 70px;
+    height: 30px;
+    color: white;
+    background-color: #ff6b6b;
+    border: 1px #ff6b6b solid;
+    border-radius: 5px;
+    margin-top: 120px;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 20vw;
+    position: absolute;
+    left: -20%;
+    top: 3%;
+  }
+  .RECRUITER-LOGO {
+    position: absolute;
+    left: 47%;
+  }
+  .textAndImage {
+    width: 400px;
+    height: 0px;
+    margin-right: 47vw;
+  }
+
+  .loginB,
+  .registerB {
+    width: 120px;
+    height: 40px;
+
+    border: 1px white solid;
+    border-radius: 10px;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    background-color: #ff6b6b;
+  }
+  .loginB {
+    margin-right: 50px;
+    margin-top: 200px;
+  }
+  .registerB {
+    margin-right: 295px;
+    color: red;
+    background-color: white;
+    margin-top: 170px;
+    margin-top: 200px;
+  }
+
+  .middle-part {
+    display: flex;
+    flex-direction: column;
+
+    border: 0.5px #ffffff solid;
+    margin-left: 20px;
+    margin-right: 12px;
+    margin-top: 40px;
+    height: 200px;
+    width: 90vw;
+    box-shadow: 0px 0px 22px 4px #ff202040;
+  }
+
+  .CURRENCY {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 20px;
+    margin-left: 60px;
+    height: 20px;
+    margin-top: 20px;
+    width: 60px;
+    justify-content: end;
+  }
+  .GROUP {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 20px;
+    margin-top: 20px;
+  }
+
+  .LOCATION {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .container {
+    margin-left: 5px;
+  }
+  .findJobInput {
+    width: 60%;
+    height: 38px;
+    position: relative;
+    padding-left: 70px;
+    font-family: DM Sans;
+    border: 1.8px solid #e3e3e3;
+    display: flex;
+
+    margin-left: 20px;
+  }
+  .findJobInput::placeholder {
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  /* .skillAndClear{
+      display: flex;
+      flex-direction: row;
+      gap:40%;
+      
+    } */
+
+  .addJob {
+    position: absolute;
+    left: 79%;
+    top: 56%;
+
+    transform: translate(-20%, -0%);
+    background-color: red;
+    color: white;
+    font-family: DM Sans;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: 2px red solid;
+    width: 80px;
+    height: 30px;
+
+    border-radius: 10px;
+  }
+
+  .dropdown {
+    width: 100px;
+    height: 30px;
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .skillAndClear {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .skillRendering {
+    min-width: 60px;
+
+    height: 30px;
+    background-color: #ffeeee;
+    display: flex;
+    margin-right: 30px;
+    padding-left: 10px;
+    position: relative;
+    right: 3%;
+
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 0em;
+
+    margin-top: 2px;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .x {
+    background-color: #cd5252;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    left: 100%;
+    top: 0;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    height: 14px;
+    align-items: center;
+  }
+  .x:hover {
+    background-color: red;
+    color: white;
+  }
+  .inputAndSearch {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+  }
+
+  .search {
+    position: absolute;
+    top: 15%;
+    transform: translate(140%, 48%);
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
+
+  .clear {
+    position: absolute;
+    left: 10%;
+    top: 140%;
+    transform: translate(-20%, 160%);
+    color: red;
+    font-family: DM Sans;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .renderingJob {
+    margin-top: 40px;
+    box-shadow: 0 0 4px #ff2020;
+    padding: 15px;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    box-shadow: 0px 0px 22px 4px #ff202040;
+
+    width: 88%;
+    border-left: 4px red solid;
+    border-right: 4px red solid;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+  .bottom-part {
+    display: flex;
+    flex-direction: column;
+
+    border: 0.5px #ffffff solid;
+    margin-left: -20px;
+    margin-right: 12px;
+    height: 200px;
+  }
+
+  .jobRender-leftDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .skill-show {
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    z-index: -100;
+  }
+  .class-one {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    width: calc(70% - 20px);
+
+    gap: 5px;
+  }
+
+  .class-two {
+    margin-left: 40px;
+    display: flex;
+
+    width: 40px;
+  }
+
+  .jobRender-rightDiv {
+    display: flex;
+    float: row;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .job-rendering {
+    height: 300px;
+    padding-bottom: 10px;
+  }
+  .editJob,
+  .viewDetail {
+    border: 2px solid #ed5353;
+    width: 100px;
+    height: 30px;
+
+    border-radius: 5px;
+  }
+  .editJob {
+    color: red;
+
+    position: absolute;
+    left: 18%;
+    margin-top: 40px;
+  }
+  .viewDetail {
+    color: white;
+    background-color: red;
+    position: absolute;
+    left: 55%;
+    margin-top: 20px;
+  }
+  .leftDiv-right {
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .LEFT-DIV-RIGHT {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 80px;
+  }
+  .companyName {
+    width: 10vwpx;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
